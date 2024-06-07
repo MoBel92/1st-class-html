@@ -1,17 +1,18 @@
 
+let index = 0;
 show_image(index);
 
 
-function show_image(){
-index += i ;
+function show_image(i){
+ index += i ;
 
 let images = document.getElementsByClassName("image");
 let dots = document.getElementsByClassName("dot");
 
-for(let i=0 ; i< images.length;i++){
+for(let i=0 ; i< images.length; i++){
     images[i].style.display = "none";
 
-    for(let i=0; i<dots.length; i++){
+    for(let i=0; i< dots.length; i++){
 
         dots[i].className = dots[i].className.replace(" active ", "")
     }
@@ -23,6 +24,6 @@ if (index < 0 ){
     index = images.length - 1;
 }
 
-index[index].style.display ="block";
+images[index].style.display = "block";
 dots[index].className += "active";
 }}
